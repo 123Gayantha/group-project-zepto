@@ -1,0 +1,35 @@
+/* footer start */
+footer{
+    background: #332e29;
+}
+#footerdiv{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.footermenuu{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.title1{
+    color: #eee;
+    font-weight: bold;
+    font-size: 18px;
+}
+.footerlinks{
+    color: #ccc;
+}
+.title1, .footerlinks{
+    font-family: var(--font1);
+    padding: 10px;
+}
+#copyright{
+    background: #333;
+    padding: 20px 0;
+}
+#text{
+    text-align: center;
+    color: #ccc;
+}
+
