@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+#top{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    width: 150px;
+}
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#u1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+ 
