@@ -7,11 +7,78 @@
     <link rel="stylesheet" href="footer.css">
     <title>Batar System</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        .zi500{
+            width: 180px;
+            box-shadow: 3px 3px 3px #000;
+            transition: 1s all;
+        }
+        .za500{
+            text-decoration: none; 
+            display: inline-block; 
+            margin:0 15px;
+            perspective:400px; 
+            transition: .5s all; 
+            width:190px; 
+            text-align: center;
+        }
+        .zs500{
+            display: block; 
+            color: #000; 
+            text-align: center; 
+            font-size: 15px; 
+            font-weight: bold; 
+            margin:10px 0;
+        }
+        .zd500{ 
+            margin:0 20px 30px; 
+            box-sizing: border-box;
+            position: relative; 
+            height: 220px;
+        }
+        .zd501{ 
+            overflow: hidden; 
+            height: 250px; 
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            margin:auto 40px;
+        }
+        .zd502{
+            display: flex; 
+            position: absolute; 
+            transition:1s all; 
+            margin-top:20px; 
+            left:-12px;
+        }
+        .zbt501, .zbt502{
+            width: 0; 
+            height: 0; 
+            position:absolute; 
+            top:45px; 
+            z-index:100;
+			top: 0; 
+            bottom: 0; 
+            margin:auto; 
+            padding:0; 
+            background:none;
+            border:40px solid transparent;
+            border-left:20px solid red; 
+            border-right:20px solid transparent; 
+        }
+		.zbt501{ 
+            left:-5px; 
+            transform:scaleX(-1);
+        }
+		.zbt502{ 
+            right:-5px; 
+            border-left:20px solid red;
+        }
+    </style>
 </head>
 <body>
-    <section id="header">
-        <div class="w" id="top">
+    <header>
+        <div class="wrapper" id="top">
             <div>
                 <img src="img/logo.jpg" alt="logo" id="logo">
             </div>  
@@ -30,7 +97,82 @@
                 </div>
             </div>
         </div>
+    </header>
+      
+    <section>
+        <div class="wrapper" id="cats">
+            <h1>categories</h1>
+            <div class="zd500">
+                <button class="zbt501"></button>
+                <div class="zd501">
+                    <div class="zd502" data-w="0">
+                        <a class="za500" href="#">
+                            <span class="zs500">Electronic</span>
+                            <img src="img/electronic.jpg" alt="Electronic-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Computer</span>
+                            <img src="img/computer.png" alt="Computer-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Mobile</span>
+                            <img src="img/mobile.jpg" alt="Mobile-Phones" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Kitchen</span>
+                            <img src="img/kitchen.jpg" alt="Kitchen-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Music</span>
+                            <img src="img/music.jpg" alt="Music-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Fashion</span>
+                            <img src="img/fasion.jpg" alt="Fashion-Items" class="zi500">
+                        </a>  
+                        <a class="za500" href="#">
+                            <span class="zs500">Sport</span>
+                            <img src="img/sport.jpg" alt="Sport-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Bathroom</span>
+                            <img src="img/bathroom.jpg" alt="Bathroom-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Household</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Home-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Hardware</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Hardware-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Agriculture</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Agri-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Service</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Service-Products" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Disability</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Disability-Items" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Toy</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Toys" class="zi500">
+                        </a>
+                        <a class="za500" href="#">
+                            <span class="zs500">Accessories</span>
+                            <img src="https://watchlanka.com/img/programs/240/no-img.jpg" alt="Other-Accessories" class="zi500">
+                        </a>
+                    </div>
+                </div>
+                <button class="zbt502"></button>
+            </div>
+        </div>
     </section>
+
     <footer>
         <div class="wrapper" id="footerdiv">
             <nav class="footermenu">
@@ -60,4 +202,42 @@
         </div>
     </footer>
 </body>
+<script>
+    window.addEventListener('touchend',WLcarousel);
+    window.addEventListener('click',WLcarousel);
+
+function WLcarousel(e){
+	if(e.target && e.target.className== 'zbt502'){
+		 //var w = e.target.parentElement.innerWidth;    
+		 var p = e.target.parentElement;   
+		//  var w = p.offsetWidth;
+		 var w = p.querySelector('.za500').offsetWidth;
+		 w = parseInt(w)+30;
+		 var c = p.querySelector('.zd502');
+		 var cw = c.offsetWidth;
+		 var pos = parseInt(c.getAttribute("data-w"));
+		 pos+=w;
+		 if(cw>pos){
+			 c.setAttribute("data-w",pos);
+			 c.style.transform="translateX(-"+pos+"px)";
+		 }
+	}
+	if(e.target && e.target.className== 'zbt501'){
+		 //var w = e.target.parentElement.innerWidth;    
+		 var p = e.target.parentElement;   
+		 //  var w = p.offsetWidth;
+		 var w = p.querySelector('.za500').offsetWidth;
+		 w = parseInt(w)+30;
+		 var c = p.querySelector('.zd502');
+		 var cw = c.offsetWidth;
+		 var pos = parseInt(c.getAttribute("data-w"));
+		 pos-=w;
+		 if(cw>pos && pos>=0){
+		 	c.setAttribute("data-w",pos);
+			c.style.transform="translateX(-"+pos+"px)";
+		 }
+	}
+	
+}
+</script>
 </html>
